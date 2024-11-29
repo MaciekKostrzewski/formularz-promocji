@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Promocji</title>
+</head>
+<body>
+    <h1>Lista Promocji</h1>
+    <ul>
+        {% for promotion in promotions %}
+            <li>
+                <strong>{{ promotion[0] }}</strong><br>
+                Kody PLU: {{ promotion[1] }}<br>
+                Cena netto: {{ promotion[2] }}<br>
+                Cena brutto: {{ promotion[3] }}<br>
+                Data startowa: {{ promotion[4] }}<br>
+                Data końcowa: {{ promotion[5] }}<br>
+                Sklepy: {{ promotion[6] }}<br>
+                Warunki: {{ promotion[7] }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
